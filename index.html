@@ -7,70 +7,88 @@
     <style>/* style nametab to enable internal css code */
         body {
             text-align: center; 
-            background: darkslategray /* url("moon.jpg") no-repeat center scroll */ ; /* shorthand background */
+            background: rgb(60, 55, 50) /* url("moon.jpg") no-repeat center scroll */ ; /* shorthand background */
         } /* Internal CSS for Body */
-        .h1  {
-            text-align: center; 
-            border: 2px solid rgba(165, 165, 165, 0.3);
-            color: black;
-            margin-top: 60px;
-            margin-right: 20px;
-            padding: 5px;
-        } /* Internal CSS for the Heading */
-        .main {
-            text-decoration: underline;
-        } /* Internal CSS for the Heading */
-        table {
-            border: 1px solid black;
-        }
+
+        div {
+            margin-bottom: 20px;
+            }
         th,td {
+            border-radius: 10px;
+            text-align: center;
+            vertical-align: middle;
             text-align: center; 
             border: 1px solid black;
-            background-image: url("moon.jpg"); /* internal CSS block's image */
+            /* background-image: url("moon.jpg");*/ /* internal CSS block's image */
             background-repeat: repeat-x;
             background-position: right top;
         } /* internal CSS border collapse: collapse; for single line border */
+        table {
+            margin: auto; /* center table */
+            margin-top: 50px;
+            border-radius: 10px;
+            overflow: hidden; /* important for rounded corners */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* shadow effect */
+        }
         #myHeader {
             text-align: center;
             background-color: hsla(278, 97%, 43%, 0.2);
             border: 5px solid black;
             border-radius: 10%;
+            width: 50%;
+            margin: auto;
+            margin-bottom: 5%;
+            margin-top: 5%;
         } /* internal CSS for the header with id "myHeader" */
         .para1 {
             text-align: center; 
             font-size: 35px;
             color: rgb(67, 148, 121);
         }
-        ol,li {
-            text-align: center;
+        ol li::marker, ul li::marker {
+            color: gold;
+            font-size: 1.5em;
         }
-        div {
-            margin-bottom: 20px;
-        }
-        form{
-            margin-top: 20px;
-            margin-bottom: 20px;
+        .form {
+            margin-top: 2%;
+            margin-bottom: 2%;
         }
         input {
             text-align: center; 
             gap: 10px;
-            margin-bottom: 20px;
+            margin-bottom: 5%;
             font-size: 30px;
         }
-        #checkbox{
+        #checkbox {
             font-size: 30px;
         }
         select {
             text-align: center; 
             font-size: 30px;
             flex-direction: column;
-            margin-bottom: 20px;
+            margin-bottom: 15%;
         }
-        textarea {
-            font-size: 30px;
-            margin-bottom: 20px;
-            width: 50%;
-            height: 30%;
+        th {
+            text-align: left;
+            background-color: rgb(75, 70, 70);
+            width: 30%; 
+        }
+        tr:hover {
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+        } /* hover effect for table rows */
+        .p1 {
+            margin-bottom: 5%;
+            margin-top: 5%;
+        }
+        .list-container {
+            margin: auto;
+            display: block;
+            padding: 0;
+            display: inline-block;
+            list-style-position: inside;
+            text-align: left; /* left-align inside the centered block */
         }
     </style>
     <script>
@@ -81,13 +99,15 @@
     </script>
     <script> 
         function changeimage() { 
-            document.getElementById("Myimage").src="neon-green.jpg";
-            document.getElementById("Myimage").style.width="20%";
+            document.getElementById("Myimage").src="/pictures/neon-green.jpg";
+            document.getElementById("Myimage").style.width="100%";
+            document.getElementById("Myimage").style.height="100%";
         }
     </script>
 </head><!-- meta info -->
     <body ><!-- body info / note use url when using background image-->
-        <h1 class="h1 main">Welcome to my first project</h1> <!-- class - name of the class / main - class name / h1 -->        
+        <h1 class="h1">Welcome to my first project</h1> <!-- class - name of the class / main - class name / h1 -->        
+            <br>
             <a href="https:www.w3schools.com">Click here to see where im am learning from</a><!-- href - attribute name /  "https:www.w3schools.com" is the link or URL for href -->
             <p title="I am a tooltip">This here is a tooltip sentence</p><!-- gives info when hovered over -->
             <p style="font-family: monospace;" class="para1">- This page consist of HTML, CSS and javascript</p><!-- online cssfont-family - allows for different fonts -->
@@ -97,16 +117,16 @@
             <!-- paragraph style - inline CSS / color - text color / rgb - red, green, blue -->
 
         <a href="https://www.nasa.gov/specials/60counting/universe.html">
-            <img src="Spacehole.jpg" width="350" height="200"></a><!-- image source / <a></a> to make image a link -->
+            <img src="/pictures/Spacehole.jpg" width="350" height="200"></a><!-- image source / <a></a> to make image a link -->
 
-        <div class="buttons">
-            <br>
+        <div>
             <button class="btn">Hover Me!</button>
-            <button class="next">Next ></button>
         </div>
 
         <h2 id="myHeader">This contains CSS style element with id "myHeader"</h2>
-        <a href="#linkbookmark">Jump to heading</a><!-- link to jump to section -->
+
+        <a href="#linkbookmark" style="color: aqua;">Jump to heading</a><!-- link to jump to section -->
+
         <table>
             <tr> <!-- table header -->
                 <th>Company</th> 
@@ -131,42 +151,54 @@
         </table>
 
         <h2>Ordered list</h2> <!-- ordered list header -->
-        <ol style="font-style: italic;" class="para1"> <!-- ordered list -->
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ol> <!-- ordered list end -->
+        <div>
+            <ol class="list-container" style="font-style: italic;"> <!-- ordered list -->
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ol> <!-- ordered list end -->
+        </div> <!-- div end -->
 
         <h2>Unordered list</h2> <!-- Unordered list header -->
-        <ul style="list-style-type: square;" class="para1"> <!-- unordered list -->
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul> <!-- unordered list end -->
+        <div>
+            <ul class="list-container" style="list-style-type: square;"> <!-- unordered list -->
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+            </ul> <!-- unordered list end -->
+        </div>
 
-        <h2 id="#linkbookmark">id used as bookmarks</h2>
+        <h2 id="linkbookmark" style="margin-bottom: 20px;">id used as bookmarks</h2>
 
         <div>
             <p id="result">script used from JavaScript</p>
-            <button onclick="displayResult()" style="font-size: 50px;">click me</button>
+            <button onclick="displayResult()" class="but">click me</button>
             <!-- onclick - event handler for the button / 
                 displayResult() - function to be called when button is clicked -->    
         </div>
 
-        <iframe src="This is just a frame in the document" height="20%" width="20%" name="iframe_a"></iframe>
+        <iframe src="This is just a frame in the document" height="50%" width="40%" name="iframe_a"></iframe>
         <!-- iframe - inline frame to display another page within the current page / name - name of the iframe to open link in -->
-
-        <p> <a href="https:www.w3schools.com"
-            target="iframe_a">W3Schools.com</a>
-        </p> <!-- iframe - inline frame to display another page within the current page / target - name of the iframe to open link in -->
-        <button onclick="changeimage()"><img id= "Myimage" src="Spacehole.jpg"></img></button>
-
-        <form>
-            <input type="text" name="name"><br>
-            <input type="checkbox" name="checkbox1">I have checked this checkbox<br>
-            <input type="checkbox" name="checkbox2">I have a car
-        </form> <!-- form - allows for user input / input - allows for user input / type - type of input / name - name of the input field / checkbox - allows for multiple selections -->
         
+        <p class="p1"> <a href="https://en.wikipedia.org/wiki/Source_lines_of_code" target="iframe_a">In Screen source find 👆</a>
+        </p> <!-- iframe - inline frame to display another page within the current page / target - name of the iframe to open link in -->
+
+        <button class="pictures" onclick="changeimage()">
+            <img id= "Myimage" src="/pictures/Spacehole.jpg" height="100%" width="100%"></img>
+        </button>
+        
+        <form>
+            <div class="form">
+                <input type="text" name="name">
+            </div>
+            <div class="form">
+                <input type="checkbox" name="checkbox1">I have checked this checkbox
+            </div>
+            <div class="form">
+                <input type="checkbox" name="checkbox2">I have a car
+            </div>
+        </form> <!-- form - allows for user input / input - allows for user input / type - type of input / name - name of the input field / checkbox - allows for multiple selections -->
+
         <select name="cars" id="cars">
             <option value="volvo">Volvo</option>
             <option value="saab">Saab</option>
@@ -174,8 +206,10 @@
             <option value="audi">Audi</option>
         </select><br> <!-- select - dropdown list / option - list item in the dropdown list -->
 
-        <textarea >This is a text area</textarea><br><!-- textarea - allows for multiple lines of text input -->
-        <input type="submit"> <!-- submit - button to submit the form / type - type of input -->
-
+        <textarea class="textarea">This is a text area</textarea><br><!-- textarea - allows for multiple lines of text input -->
+        <input type="submit"><br> <!-- submit - button to submit the form / type - type of input -->
+        
+        <a class="next" href="about.html">Next Page</a>
+        
     </body>
 </html>
