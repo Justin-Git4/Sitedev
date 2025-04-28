@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<lang="en">
-<html>
+<html lang="en">
 <head> <!-- meta info -->
     <title>Next Page</title>
     <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>/* style nametab to enable internal css code */
         body {
             text-align: center; 
@@ -16,7 +16,7 @@
             blue,
             #ff7e5f
             ); /* gradient background */
-            animation: glowing 200s linear infinite; /* animation for gradient */
+            /* animation: glowing 200s linear infinite; animation for gradient; */
             transition: opacity 0.5s ease-in-out;
             background-size: 600%;
         } /* Internal CSS for Body */
@@ -60,13 +60,42 @@
 
         <div>
             <ul class="list-container" style="list-style-type: square;">
-                <li>Along the way you get to see all the amazing features HTML & Css have to  offer,
+                <li>Along the way you get to see all the amazing features HTML, CSS and Javascripts have to  offer,
                     and combined gives you a world of imagination 
                 </li>
             </ul>
         </div>
+
         <div>
+            <p class="list-container">
+                HTML = What you see\ 
+                CSS = How it looks\ 
+                JavaScript = What it does.
+            </p>
+        </div>
+
+        <h3 >You will see that it is more than just pixels and colors<br> 
+            it is a way to release your imagination</h3>
+
+        <!-- Custom Popup -->
+        <!-- <div id="popup" class="hidden">
+            <div class="popup-content">
+                <p>Hello! This is a custom popup!</p>
+                <button id="closePopup">Close</button>
+            </div>
+        </div> -->
+
+        <!-- <button id="openPopup">Open Popup</button> -->
+
+        <!-- <div id="bubble-container"></div> -->
+
+        
+        
+        <div>
+            
             <a class="spinning-border"  href="index.html">Go Back Home</a>
         </div>
+
+        <script src="script.js"></script>
     </body>
 </html>

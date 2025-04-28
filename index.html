@@ -9,7 +9,14 @@
             text-align: center; 
             background: rgb(60, 55, 50) /* url("moon.jpg") no-repeat center scroll */ ; /* shorthand background */
         } /* Internal CSS for Body */
-
+        .list-container {
+            margin: auto;
+            display: block;
+            padding: 0;
+            display: inline-block;
+            list-style-position: inside;
+            text-align: left; /* left-align inside the centered block */
+        }
         div {
             margin-bottom: 20px;
             }
@@ -82,14 +89,6 @@
             margin-bottom: 5%;
             margin-top: 5%;
         }
-        .list-container {
-            margin: auto;
-            display: block;
-            padding: 0;
-            display: inline-block;
-            list-style-position: inside;
-            text-align: left; /* left-align inside the centered block */
-        }
     </style>
     <script>
         function displayResult() { 
@@ -105,7 +104,7 @@
         }
     </script>
 </head><!-- meta info -->
-    <body ><!-- body info / note use url when using background image-->
+    <body><!-- body info / note use url when using background image-->
         <h1 class="h1">Welcome to my first project</h1> <!-- class - name of the class / main - class name / h1 -->        
             <br>
             <a href="https:www.w3schools.com">Click here to see where im am learning from</a><!-- href - attribute name /  "https:www.w3schools.com" is the link or URL for href -->
