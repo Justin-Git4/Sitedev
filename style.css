@@ -244,6 +244,7 @@ h1 {
     padding: 20px;
     font-size: 1.3rem;
     margin-bottom: 5%;
+    resize: none;
 }
 
 .textarea::before, textarea::after {
@@ -409,4 +410,9 @@ button:hover {
         transform: translateY(100vh) scale(0.5);
         opacity: 1;
     }
+}
+
+.color-border {
+    border: 2px solid black;
+    padding: 10px;
 }

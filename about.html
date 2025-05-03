@@ -1,58 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head> <!-- meta info -->
-    <title>Next Page</title>
+    <title>Start with Front-End</title>
     <link rel="stylesheet" href="style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>/* style nametab to enable internal css code */
-        body {
-            text-align: center; 
-            background: rgb(30, 30, 30); /* shorthand background */
-            content: '';
-            background-image: linear-gradient(to right, 
-            #ff7e5f, 
-            purple,
-            #ff7e5f,
-            blue,
-            #ff7e5f
-            ); /* gradient background */
-            /* animation: glowing 200s linear infinite; animation for gradient; */
-            transition: opacity 0.5s ease-in-out;
-            background-size: 600%;
-        } /* Internal CSS for Body */
-        div {
-            margin-bottom: 4%
-        }
-        ul {
-            list-style-position: inside; /* makes the bullets inside the list item */
-            padding: 0;
-            margin: 0;
-        } /* removes default padding and margin so that text can be in line in the center*/
-        li {
-            display: inline-block; /* makes all <li> sit next to each other */
-            margin-right: 20px; /* adds space between list items */
-            position: relative;
-            padding-left: 1%; /* enough space for bullet */
-            width: 70%; /* width of the list item */
-            white-space: wrap; /* prevents line break */
-        } /* makes all <li> sit next to each other */
-        li::before {
-            content: "•"; /* Unicode bullet */
-            position: absolute;
-            left: 0;
-            color: white; /* change color if you want */
-        } /* adds a bullet before each list item */
-        .list-container {
-            margin: auto;
-            display: block;
-            padding: 0;
-            display: inline-block;
-            list-style-position: inside;
-        }
-        ul li::marker {
-            color: gold;
-            font-size: 1.5em;
-        }
+    body {
+        text-align: center; 
+        background: rgb(30, 30, 30); /* shorthand background */
+        content: '';
+        background-image: linear-gradient(to right, 
+        #ff7e5f, 
+        purple,
+        #ff7e5f,
+        blue,
+        #ff7e5f
+        ); /* gradient background */
+        /* animation: glowing 200s linear infinite; animation for gradient; */
+        transition: opacity 0.5s ease-in-out;
+        background-size: 600%;
+    } /* Internal CSS for Body */
+    div {
+        margin-bottom: 4%
+    }
+    ul {
+        list-style-position: inside; /* makes the bullets inside the list item */
+        padding: 0;
+        margin: 0;
+
+    } /* removes default padding and margin so that text can be in line in the center*/
+    li {
+        display: inline-block; /* makes all <li> sit next to each other */
+        margin-right: 20px; /* adds space between list items */
+        position: relative;
+        padding-left: 1%; /* enough space for bullet */
+        width: 70%; /* width of the list item */
+        white-space: wrap; /* prevents line break */
+    } /* makes all <li> sit next to each other */
+    li::before {
+        content: "•"; /* Unicode bullet */
+        position: absolute;
+        left: 0;
+        color: white; /* change color if you want */
+    } /* adds a bullet before each list item */
+    .list-container {
+        margin: auto;
+        display: block;
+        padding: 0;
+        display: inline-block;
+        list-style-position: inside;
+    }
+    ul li::marker {
+        color: gold;
+        font-size: 1.5em;
+    }
+    h3 {
+        margin-bottom: 4%;
+    }
     </style>    
 </head>
     <body>
@@ -60,7 +64,7 @@
 
         <div>
             <ul class="list-container" style="list-style-type: square;">
-                <li>Along the way you get to see all the amazing features HTML, CSS and Javascripts have to  offer,
+                <li style="font-size: 1rem;">Along the way you get to see all the amazing features HTML, CSS and Javascripts have to  offer,
                     and combined gives you a world of imagination 
                 </li>
             </ul>
@@ -75,7 +79,8 @@
         </div>
 
         <h3 >You will see that it is more than just pixels and colors<br> 
-            it is a way to release your imagination</h3>
+            it is a way to release your imagination
+        </h3>
 
         <!-- Custom Popup -->
         <!-- <div id="popup" class="hidden">
@@ -89,13 +94,14 @@
 
         <!-- <div id="bubble-container"></div> -->
 
-        
-        
+        <h3 class="color-border">
+            You will be more than just a user you will be the creator
+        </h3>
+
         <div>
-            
             <a class="spinning-border"  href="index.html">Go Back Home</a>
         </div>
-
+        
         <script src="script.js"></script>
     </body>
 </html>
